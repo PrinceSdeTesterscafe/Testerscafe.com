@@ -15,7 +15,13 @@ return new class extends Migration
     {
         Schema::create('table_about2', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string("title");
+            $table->string("subheading");
+            $table->text("content");
+            $table->string("subheading");
+            $table->string("bulletpoint");
+            $table->string("image");
+           
         });
     }
 

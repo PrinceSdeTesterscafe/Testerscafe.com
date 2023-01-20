@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_about3', function (Blueprint $table) {
+        Schema::create('form', function (Blueprint $table) {
+            $table->id();
+            $table->string("image");
             $table->string("title");
-            $table->string("subheader");
             $table->text("content");
-            $table->text("content");
+            $table->bigInteger("category_id");
+            $table->timestamps();
         });
     }
 
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_about3');
+        Schema::dropIfExists('form');
     }
 };
